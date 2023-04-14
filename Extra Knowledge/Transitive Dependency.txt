@@ -1,0 +1,1 @@
+Transitive Dependency : When you install any package in your project dependencies there might be chance that those packages further depends on another node packages. That thing is known as Transitive Dependency.

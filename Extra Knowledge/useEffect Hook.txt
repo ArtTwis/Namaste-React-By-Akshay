@@ -1,0 +1,11 @@
+: useEffect is a hook, which takes two parameter one is callback function and another is dependency array (optional)
+
+useEffect(() => {
+
+}, []);
+
+//  empty dependency array ==> once after render
+
+//  dependency array [searchText] ==> once after initial render + everytime after render (my searchText changed)
+
+//  without dependency array ==> everytime after render

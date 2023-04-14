@@ -1,0 +1,142 @@
+* {
+  font-family: sans-serif;
+}
+
+.header {
+  background-color: goldenrod;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+#title_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#logoImg {
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+}
+
+.nav-items > ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-items > ul > li {
+  font-weight: bold;
+  margin: 0 25px 0 0;
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+  border: 1px solid #d4d4d4;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  margin: 8px 0px;
+}
+
+.card > h3 {
+  font-weight: bolder;
+  margin: 15px 0px 0px 0px;
+}
+
+.card > h6 {
+  color: #7e7e7e;
+  font-weight: lighter;
+  margin: 0px;
+}
+
+.card > h5 {
+  font-weight: bolder;
+  margin: 8px 0px;
+}
+
+.card > img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.resturantList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#search-input {
+  width: 300px;
+  background-color: #f8f8f8;
+  border: 1px solid #3b3b3b;
+  outline: none;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 18px;
+}
+
+#search-btn {
+  border: 1px solid #3b3b3b;
+  outline: none;
+  padding: 5px 8px;
+  border-radius: 8px;
+}
+
+/*Shimmer CSS */
+
+.shimmer-card {
+  width: 200px;
+  height: 250px;
+  border: 1px solid #d4d4d4;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  margin: 8px 0px;
+}
+.shimmer-title {
+  width: 60%;
+  margin-top: 10px;
+}
+.shimmer-tags {
+  width: 80%;
+  margin-top: 4px;
+}
+.shimmer-details {
+  width: 100%;
+  margin-top: 18px;
+}
+.shimmer-card .shimmer-img {
+  height: 125px;
+  width: 100%;
+}
+
+/*Animation to Shimmer Component Cards */
+.stroke {
+  height: 15px;
+  background: #777;
+}
+.animate {
+  animation: shimmer 3s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+  background-size: 1000px 100%;
+}
+@keyframes shimmer {
+  from {
+    background-position: -1000px 0;
+  }
+  to {
+    background-position: 1000px 0;
+  }
+}

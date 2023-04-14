@@ -1,0 +1,39 @@
+export function MyComponent() {}
+vs
+export default MyComponent;
+
+
+Exports without a default tag are Named exports and Exports with the default tag are Default exports.
+
+
+
+
+// Named Export :- As the title suggests, named exports use the name of the function or class as their identifier.
+
+export const MyFunction = () => {
+  ...body
+}
+
+// or
+
+export function MyFunction() {
+  ...body
+}
+
+
+When you want to import a named component, you use the same name it was exported with. Names must be imported inside curly brackets.
+
+import { MyComponent } from "./my-component"
+import { MyComponent as MyComponentAlias } from "./my-component"
+
+
+Module exports per File....
+
+export const MyFunction1 = () => {};
+
+export const MyFunction2 = () => {};
+
+export const MyFunction3 = () => {};
+
+
+import { MyComponent1, MyComponent2, MyComponent3 } from "./my-components"

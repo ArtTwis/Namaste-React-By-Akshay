@@ -1,0 +1,29 @@
+{
+  "name": "lecture4---talk-is-cheap-show-me-the-code-actual",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtTwis/NAMASTE-REACT.git"
+  },
+  "author": "Twinkle Goyal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtTwis/NAMASTE-REACT/issues"
+  },
+  "homepage": "https://github.com/ArtTwis/NAMASTE-REACT#readme",
+  "dependencies": {
+    "parcel": "^2.8.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "process": "^0.11.10"
+  }
+}
