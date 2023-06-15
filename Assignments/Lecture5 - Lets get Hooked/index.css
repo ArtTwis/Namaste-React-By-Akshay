@@ -1,5 +1,6 @@
 * {
   font-family: sans-serif;
+  user-select: none;
 }
 
 .header {
@@ -30,58 +31,20 @@
 }
 
 .nav-items > ul > li {
+  cursor: pointer;
   font-weight: bold;
   margin: 0 25px 0 0;
-}
-
-.card {
-  width: 200px;
-  height: 250px;
-  border: 1px solid #d4d4d4;
-  border-radius: 7px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1rem;
-  margin: 8px 0px;
-}
-
-.card > h3 {
-  font-weight: bolder;
-  margin: 15px 0px 0px 0px;
-}
-
-.card > h6 {
-  color: #7e7e7e;
-  font-weight: lighter;
-  margin: 0px;
-}
-
-.card > h5 {
-  font-weight: bolder;
-  margin: 8px 0px;
-}
-
-.card > img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.resturantList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
 }
 
 #search-input {
   width: 300px;
   background-color: #f8f8f8;
   border: 1px solid #3b3b3b;
+  font-size: 16px;
   outline: none;
-  padding: 8px;
+  margin: 18px 0px;
+  padding: 10px;
   border-radius: 8px;
-  margin: 18px;
 }
 
 #search-btn {
@@ -91,18 +54,70 @@
   border-radius: 8px;
 }
 
-/*Shimmer CSS */
+.resturantList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 12px;
+}
 
-.shimmer-card {
-  width: 200px;
+.card {
+  width: 225px;
   height: 250px;
   border: 1px solid #d4d4d4;
+  background: #f8f8f8;
   border-radius: 7px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 1rem;
+  margin: 8px;
+}
+
+.card > h4 {
+  cursor: pointer;
+  font-weight: bolder;
+  margin: 15px 0px 0px 0px;
+}
+
+.card > h6 {
+  color: #7e7e7e;
+  font-weight: normal;
+  margin: 4px 0px;
+}
+
+.card > h5 {
+  font-weight: bolder;
   margin: 8px 0px;
+}
+
+.card > h5.restro-rating {
+  font-weight: bolder;
+  margin: 0px;
+  color: darkgreen;
+}
+
+.card > img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/*Shimmer CSS */
+
+.shimmer-card {
+  width: 225px;
+  height: 250px;
+  border: 1px solid #d4d4d4;
+  background: #f8f8f8;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  margin: 8px;
 }
 .shimmer-title {
   width: 60%;

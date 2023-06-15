@@ -21,6 +21,7 @@ export const BodyComponent = () => {
   async function getRestaurents() {
     const data = await fetch(GET_RESTAURENTS_API_URL);
     const json = await data.json();
+    // Optional Chaining
     setRestros(json?.data?.cards[2]?.data?.data?.cards);
     setFilteredRestros(json?.data?.cards[2]?.data?.data?.cards);
   }
@@ -43,7 +44,8 @@ export const BodyComponent = () => {
           }}
         />
       </div>
-
+      
+      {/* Conditional Rendering */}
       {restros.length === 0 ? (
         <ShimmerUI />
       ) : (
