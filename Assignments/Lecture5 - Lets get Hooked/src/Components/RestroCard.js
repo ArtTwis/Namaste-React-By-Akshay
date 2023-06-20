@@ -1,7 +1,6 @@
 import { IMG_URL } from "../constant/constant";
 
 export const RestroCard = ({ restaurant }) => {
-  console.log("🚀restaurant:", restaurant)
   return (
     <div className="card">
       <img src={IMG_URL + restaurant.data?.cloudinaryImageId} />

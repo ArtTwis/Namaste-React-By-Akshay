@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Title from "./Title";
 
 const loginUser = () => {
@@ -13,10 +14,15 @@ export const HeaderComponent = () => {
       <Title />
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+          <li>
+            <Link to="/cart">Cart</Link>
+          </li>
           {isLogin ? (
             <li onClick={() => setIsLogin(false)}>Logout</li>
           ) : (

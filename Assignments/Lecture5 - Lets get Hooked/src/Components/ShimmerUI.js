@@ -1,3 +1,4 @@
+import { useId } from "react";
 import { shimmer_card_unit } from "../constant/constant";
 
 // Shimmer card to display with animation
@@ -15,8 +16,8 @@ const ShimmerCard = () => {
 const ShimmerUI = () => {
   return (
     <div className="resturantList">
-      {new Array(shimmer_card_unit).fill(0).map((index) => {
-        return <ShimmerCard key={"ShimmerCard-" + index} />;
+      {new Array(shimmer_card_unit).fill(0).map(() => {
+        return <ShimmerCard key={"ShimmerCard-" + useId()} />;
       })}
     </div>
   );
