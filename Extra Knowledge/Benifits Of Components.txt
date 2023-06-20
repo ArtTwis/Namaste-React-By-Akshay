@@ -1,0 +1,5 @@
+Make your code Modular.
+Make your code Readable.
+Make your code Maintainable.
+Make your code reuseable.
+Make your code Testable.
