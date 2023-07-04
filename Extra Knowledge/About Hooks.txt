@@ -1,0 +1,6 @@
+Why do we need hooks ?
+- Modularity - We had broken down code into meaningfull peices ie. in smaller chunks
+- Reusebility
+- Readability
+- Testable
+- Maintainable
