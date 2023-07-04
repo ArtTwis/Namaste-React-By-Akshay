@@ -1,29 +1,14 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { GET_RESTAURENT_MENU_API_URL } from "../constant/constant";
 import { IMG_URL } from "../constant/constant";
 import { makeFirstCharacterUppercase } from "../utils/helper";
 import { RestaurentMenuItem } from "../Components/RestaurentMenu";
+import useRestaurent from "../hooks/useRestaurent";
 
 const RestaurentDetail = () => {
   // How to read dynamic url params
-  let { restaurentid } = useParams();
-  const [restaurentDetail, setRestaurentDetail] = useState(null);
-  const [restaurentMenu, setRestaurentMenu] = useState(null);
+  const { restaurentid } = useParams();
 
-  const getRestaurentInfo = async () => {
-    const data = await fetch(GET_RESTAURENT_MENU_API_URL + restaurentid);
-    const response = await data.json();
-    setRestaurentDetail(response?.data?.cards[0]?.card?.card?.info);
-    setRestaurentMenu(
-      response?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
-        ?.card?.card?.itemCards
-    );
-  };
-
-  useEffect(() => {
-    getRestaurentInfo();
-  }, []);
+  const { restaurentDetail, restaurentMenu } = useRestaurent(restaurentid);
 
   return !restaurentDetail ? (
     <div>Fetching Details</div>

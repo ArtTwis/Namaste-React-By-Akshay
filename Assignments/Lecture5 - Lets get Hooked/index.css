@@ -1,6 +1,23 @@
 * {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  border: none;
   font-family: sans-serif;
   user-select: none;
+}
+
+.testingButton {
+  padding: 8px 16px;
+  border: 0px;
+  border-radius: 7px;
+  background-color: blue;
+  color: #fff;
+  margin: 12px;
+}
+
+.connection_label {
+  margin: 75px 25px;
 }
 
 .header {
@@ -37,13 +54,13 @@
 }
 
 .nav-items > ul > li {
+  cursor: pointer;
   font-weight: normal;
   margin: 0 25px 0 0;
 }
 
 .nav-items > ul > li > a {
   color: #000;
-  cursor: pointer;
   text-decoration: none;
 }
 
@@ -53,7 +70,7 @@
   border: 1px solid #3b3b3b;
   font-size: 16px;
   outline: none;
-  margin: 18px 0px;
+  margin: 18px 8px;
   padding: 10px;
   border-radius: 8px;
 }
@@ -78,8 +95,8 @@
 }
 
 .card {
-  width: 250px;
-  height: 325px !important;
+  width: 260px;
+  height: 300px !important;
   border: 1px solid #d4d4d4;
   background: #f8f8f8;
   border-radius: 7px;
@@ -128,7 +145,7 @@
 /*Shimmer CSS */
 
 .shimmer-card {
-  width: 225px;
+  width: 260px;
   height: 250px;
   border: 1px solid #d4d4d4;
   background: #f8f8f8;
@@ -199,6 +216,7 @@
   color: #000;
   font-size: 20px !important;
   font-weight: normal;
+  margin: 0;
 }
 
 #footerBase h1:first-child {

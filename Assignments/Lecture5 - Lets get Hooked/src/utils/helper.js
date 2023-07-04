@@ -10,3 +10,9 @@ export const makeFirstCharacterUppercase = (str) => {
   result = modifyArrayWithSlash(result);
   return result;
 };
+
+export const filterRestros = (inputText, restros) => {
+  return restros.filter((restro) =>
+    restro?.data?.name?.toLowerCase()?.includes(inputText.toLowerCase())
+  );
+};

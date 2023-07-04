@@ -5,6 +5,7 @@ import "../index.css";
 import { HeaderComponent } from "./Components/Header";
 import { BodyComponent } from "./Components/Body";
 import { FooterComponent } from "./Components/Footer";
+import Profile from "./Components/Profile";
 import AboutUs from "./Pages/AboutUs";
 import Cart from "./Pages/Cart";
 import NotFound from "./Pages/NotFound";
@@ -34,6 +35,12 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: <AboutUs />,
+        children: [
+          {
+            path: "profile",
+            element: <Profile />,
+          },
+        ],
       },
       {
         path: "/cart",
