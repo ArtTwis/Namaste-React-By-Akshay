@@ -1,9 +1,11 @@
 export const FooterComponent = () => {
   return (
-    <div className="footer">
-      <div id="footerBase">
-        <h1>Copyright @2023 ArtTwis All rights reserved HC</h1>
-        <h1>Made with ❤️ by Twinkle</h1>
+    <div className="footer bg-orange-500 py-8">
+      <div className="flex justify-between px-8">
+        <h1 className="my-0 text-xl text-black">
+          Copyright @2023 ArtTwis All rights reserved HC
+        </h1>
+        <h1 className="my-0 text-xl text-black">Made with ❤️ by Twinkle</h1>
       </div>
     </div>
   );

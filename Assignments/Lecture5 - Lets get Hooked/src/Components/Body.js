@@ -1,30 +1,17 @@
-import { useEffect, useState } from "react";
-import { GET_RESTAURENTS_API_URL } from "../constant/constant";
+import { useState } from "react";
 import { RestroCard } from "./RestroCard";
 import ShimmerUI from "./ShimmerUI";
 import { Link } from "react-router-dom";
 import { filterRestros } from "../utils/helper";
 import useConnection from "../hooks/useConnection";
-import useLocalStorage from "../hooks/useLocalStorage";
+import useRestaurentsList from "../hooks/useRestaurentsList";
 
 export const BodyComponent = () => {
   const [searchText, setSearchText] = useState(""); // To create state variable we use useState hook and it return the Array
-  const [restros, setRestros] = useState([]);
-  const [filteredRestros, setFilteredRestros] = useState([]);
+
+  const { restros, filteredRestros, setFilteredRestros } = useRestaurentsList();
 
   const connection = useConnection();
-
-  const getRestaurents = async () => {
-    const data = await fetch(GET_RESTAURENTS_API_URL);
-    const json = await data.json();
-    // Optional Chaining
-    setRestros(json?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestros(json?.data?.cards[2]?.data?.data?.cards);
-  };
-
-  useEffect(() => {
-    getRestaurents();
-  }, []);
 
   if (!connection)
     return (
@@ -38,10 +25,10 @@ export const BodyComponent = () => {
 
   return (
     <div className="Body">
-      <div className="search-container">
+      <div className="input-field">
         <input
           type="text"
-          id="search-input"
+          className="w-96 ml-7 mt-4 p-2 text-lg border-solid border-2 border-gray-400 rounded-lg outline-none focus:ring focus:ring-orange-500 focus:border-transparent"
           value={searchText}
           placeholder="Filter restro"
           onChange={(e) => {
@@ -56,16 +43,16 @@ export const BodyComponent = () => {
       {restros.length === 0 ? (
         <ShimmerUI />
       ) : (
-        <div className="resturantList">
+        <div className="flex flex-wrap">
           {filteredRestros.length === 0 ? (
-            <h3>No restaurent match your filter!!</h3>
+            <h3 className="text-lg m-4">No restaurent match your filter!!</h3>
           ) : (
             filteredRestros.map((restro, index) => {
               return (
                 <Link
+                  className="no-underline"
                   to={"/restaurent/" + restro.data.id}
-                  key={restro.data.uuid + "-" + index}
-                >
+                  key={restro.data.uuid + "-" + index}>
                   <RestroCard restaurant={restro} />
                 </Link>
               );

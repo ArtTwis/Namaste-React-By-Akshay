@@ -1,4 +1,4 @@
-BUNDLERS :- Vite, Webpack, Parcel
+BUNDLERS :- Vite, Webpack, Parcel, Rollup or Browserify.
 
 Parcels gives us such Superpowers mentioned below
 

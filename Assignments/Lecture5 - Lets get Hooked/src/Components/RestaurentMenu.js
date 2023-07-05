@@ -2,15 +2,26 @@ import { IMG_URL } from "../constant/constant";
 
 export const RestaurentMenuItem = ({ menuitem }) => {
   return (
-    <div className="menu-item-card">
-      <img src={IMG_URL + menuitem.card.info.imageId} />
-      <div className="item-detail">
-        <h2>{menuitem.card.info.name}</h2>
-        <h4>{menuitem.card.info.category}</h4>
-        <p>{menuitem.card.info.description}</p>
+    <div className="w-[800px] my-3 rounded-lg bg-gray-100 border-1 border-solid border-gray-500 flex items-center justify-between hover:bg-orange-100">
+      <img
+        className="h-40 mx-3 my-3 rounded-lg border-1 border-solid border-gray-300"
+        src={IMG_URL + menuitem.card.info.imageId}
+      />
+      <div className="w-full flex flex-col items-start">
+        <h2 className="m-0 mb-2 text-black text-xl font-bold">
+          {menuitem.card.info.name}
+        </h2>
+        <h4 className="m-0 mb-1 text-black text-sm">
+          {menuitem.card.info.category}
+        </h4>
+        <p className="m-0 mb-0 text-gray-500 text-sm">
+          {menuitem.card.info.description}
+        </p>
       </div>
-      <h2>₹ 252</h2>
-      <button className="menu-item-button">Select</button>
+      <h2 className="mx-2 my-0 w-48 text-black text-2xl">₹ 252</h2>
+      <button className="mx-3 px-3 py-2 rounded-lg bg-green-700 text-white border-1 border-transparent border-solid hover:bg-green-900">
+        Select
+      </button>
     </div>
   );
 };

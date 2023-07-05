@@ -13,27 +13,54 @@ export const HeaderComponent = () => {
   const connection = useConnection();
 
   return (
-    <div className="header">
+    <div className="flex justify-between bg-orange-500">
       <Title />
-      <div className="nav-items">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
+      <ul className="flex py-10 mr-8 mb-0">
+        <li className="px-2">
+          <Link className="no-underline text-black text-xl font-bold" to="/">
+            Home
+          </Link>
+        </li>
+        <li className="px-2">
+          <Link
+            className="no-underline text-black text-xl font-bold"
+            to="/about/profile">
+            About Us
+          </Link>
+        </li>
+        <li className="px-2">
+          <Link
+            className="no-underline text-black text-xl font-bold"
+            to="/instamart">
+            Instamart
+          </Link>
+        </li>
+        <li className="px-2">
+          <Link
+            className="no-underline text-black text-xl font-bold"
+            to="/cart">
+            Cart
+          </Link>
+        </li>
+        {connection ? (
+          <li className="px-2">🟢</li>
+        ) : (
+          <li className="px-2">🔴</li>
+        )}
+        {isLogin ? (
+          <li
+            className="px-2 no-underline text-black text-xl font-bold"
+            onClick={() => setIsLogin(false)}>
+            Logout
           </li>
-          <li>
-            <Link to="/about/profile">About Us</Link>
+        ) : (
+          <li
+            className="px-2 no-underline text-black text-xl font-bold"
+            onClick={() => setIsLogin(true)}>
+            Login
           </li>
-          <li>
-            <Link to="/cart">Cart</Link>
-          </li>
-          {connection ? <li>🟢</li> : <li>🔴</li>}
-          {isLogin ? (
-            <li onClick={() => setIsLogin(false)}>Logout</li>
-          ) : (
-            <li onClick={() => setIsLogin(true)}>Login</li>
-          )}
-        </ul>
-      </div>
+        )}
+      </ul>
     </div>
   );
 };
