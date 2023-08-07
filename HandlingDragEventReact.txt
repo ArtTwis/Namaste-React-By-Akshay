@@ -1,0 +1,60 @@
+const BottomSheet = (props: BottomSheetProps) => {
+  const resizeableRef = useRef<HTMLDivElement>(null);
+  const [drag, setDrag] = useState<{
+    initialMousePointerPosition: any;
+    initialProductViewHeight: any;
+  }>({
+    initialMousePointerPosition: 0,
+    initialProductViewHeight: 0,
+  });
+
+  const handleStart = (e: any) => {
+    const initialMousePointerPosition = e.clientY;
+    const initialProductViewHeight = resizeableRef.current?.clientHeight;
+    setDrag({
+      initialMousePointerPosition,
+      initialProductViewHeight,
+    });
+  };
+
+  const handleMove = (e: any) => {
+    if (e.clientY) {
+      const { initialMousePointerPosition, initialProductViewHeight } = drag;
+      const endMouse = e.clientY;
+      let endHeight = null;
+
+      if (endMouse < initialMousePointerPosition) {
+        endHeight =
+          initialProductViewHeight + (initialMousePointerPosition - endMouse);
+      }
+
+      if (endMouse > initialMousePointerPosition) {
+        endHeight =
+          initialProductViewHeight - (endMouse - initialMousePointerPosition);
+      }
+
+      if (endHeight) {
+        if (props.handleResize && props.isOpen) {
+          props.handleResize(endHeight);
+        }
+      }
+    }
+  };
+
+  return (
+    <SheetWrapper
+      {...props}
+      className={`${props.className}`}
+      ref={resizeableRef}
+      draggable={true}
+      onDragStart={(e) => handleStart(e)}
+      onDragEnd={(e) => handleMove(e)}>
+      <ResizeContainer>
+        <StyledResizer isFocusMode={props.isFocusMode}>
+          <IconCaretUp size={12} />
+        </StyledResizer>
+      </ResizeContainer>
+      {props.children}
+    </SheetWrapper>
+  );
+};
