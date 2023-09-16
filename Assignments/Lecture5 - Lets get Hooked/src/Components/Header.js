@@ -13,7 +13,7 @@ export const HeaderComponent = () => {
   const connection = useConnection();
 
   return (
-    <div className="flex justify-between bg-orange-500">
+    <div className="flex justify-between bg-orange-300">
       <Title />
       <ul className="flex py-10 mr-8 mb-0">
         <li className="px-2">

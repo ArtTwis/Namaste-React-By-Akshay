@@ -1,6 +1,6 @@
 export const FooterComponent = () => {
   return (
-    <div className="footer bg-orange-500 py-8">
+    <div className="footer bg-orange-300 py-8">
       <div className="flex justify-between px-8">
         <h1 className="my-0 text-xl text-black">
           Copyright @2023 ArtTwis All rights reserved HC
