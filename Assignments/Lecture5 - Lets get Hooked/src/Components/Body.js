@@ -51,8 +51,8 @@ export const BodyComponent = () => {
               return (
                 <Link
                   className="no-underline"
-                  to={"/restaurent/" + restro.data.id}
-                  key={restro.data.uuid + "-" + index}>
+                  to={"/restaurent/" + restro.info.id}
+                  key={restro.info.uuid + "-" + index}>
                   <RestroCard restaurant={restro} />
                 </Link>
               );
