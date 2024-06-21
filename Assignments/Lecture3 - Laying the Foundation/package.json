@@ -1,0 +1,26 @@
+{
+  "name": "lecture3---laying-the-foundation",
+  "version": "1.0.0",
+  "description": "Laying the foundation of React",
+  "scripts": {
+    "start": "parcel index.html",
+    "https": "parcel index.html --https",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ArtTwis/NAMASTE-REACT.git"
+  },
+  "author": "Twinkle Goyal",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "parcel": "^2.8.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

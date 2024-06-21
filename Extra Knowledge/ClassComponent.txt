@@ -1,0 +1,106 @@
+What is Class based Component ?
+It is just a normal class.
+
+Syntax :
+-------
+
+class Component_Name extends React.Component {
+  
+  constructor(props) {
+    super(props);
+
+    // Create State :-
+    this.state = {
+      count: 0,
+    }
+  }
+
+  componentDidMount() {
+    console.log("ComponentDidMount Called");
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if(this.state.userInfo !== prevState.userInfo){
+      
+    }
+  }
+  
+  render () {
+    // you cannot create a class component without render method.
+    // this render method should return some JSX like functional component
+    
+    const { count } = this.state;
+    
+    return <>
+      <h1> Class Component </h1>
+       <button
+          className="testingButton"
+          onClick={() =>
+            this.setState({ count: count + 1 })
+          }
+        >
+          Increment
+        </button>
+    </>
+  }
+
+}
+
+
+
+Note : 
+- Whenever we say normally we're rendering a component that termology came from class component in which we have that render method().
+- When we create a class component that render method should be important have in it and that render method is called which return some piece of JSX.
+- When class is invoked first thing is construtor is called and it's the best place to initialization.
+- componentDidMount method will be called after render function and it is the best place to make an API call.
+- componentDidMount is call only after first render, it is same as empty dependency array in useEffect
+- componentDidUpdate is call after every second render.
+- componentWillUnmount is call only when your component will be unmounted. It helps in making your application faster, scalable and most important to cleanup the mess we made in our code. 
+
+
+
+
+
+Life Cycle of class based component :
+  - constructor()
+  - render()
+  - componentDidMount()
+  - render()
+  - componentDidUpdate()
+
+
+Life Cycle of Nested class based component :
+  - Parent constructor
+  - Parent render
+  - Child constructor
+  - Child render
+  - Child componentDidMount
+  - Parent componentDidMount
+
+
+Life Cycle of multiple nested class based component :
+  - Parent constructor
+  - Parent render
+  - Child1 constructor
+  - Child1 render
+  - Child2 constructor
+  - Child2 render
+  - Child1 componentDidMount
+  - Child2 componentDidMount
+  - Parent componentDidMount
+
+
+
+Important Note of react class based component life Cycle
+- There are two phases in class based component
+  1 - Render phase
+  2 - Commit phase
+- Render phase has constructor method() and render method()
+- Commit phase has componentDidMount method(), here react actuall updates the DOM
+
+
+- We can't make useEffect callback function async because React's useEffect hook expects a cleanup function returned from it which is called when the component unmounts. Using an async function here will cause a bug as the cleanup function will never get called. But in class based component we have another method which is called after unmounting the component ie. componentWillUnmount(). That's why we can make async to componentDidMount but not to callback function inside useEffect.
+
+
+
+  

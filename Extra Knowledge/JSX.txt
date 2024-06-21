@@ -1,0 +1,13 @@
+JSX => Syntax extension to JavaScript - Developed by Facebook Developer
+
+It is basically a React element.
+
+React.createElement => Object => HTML(DOM)
+
+JSX => React.createElement => Object => HTML(DOM) 
+(Babel is using React only and converting JSX syntax into React.createElement)
+
+Advantages of JSX :-
+- Readibility
+- Developer Experience
+- Syntactical Sugar

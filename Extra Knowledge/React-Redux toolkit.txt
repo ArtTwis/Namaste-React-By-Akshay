@@ -1,0 +1,53 @@
+Purpose :-
+The Redux Toolkit packaged is intended to be the standard way to write Redux logic. It was originally created to help address three common concerns about Redux.
+
+- Configuring a Redux store is too complicated
+- I have to add a lot of packages to get Redux to do anything useful
+- Redux requires too much boilerplates code
+
+
+=====================================================================================================================================
+
+Steps => When we click on button, it dispatches an Action which calls a reducer function, which updates the slice of redux store. 
+
+Click button => dispatch an Action => Call reducer function => Update slice of a store
+
+useSelector to read data from slice of store, it is also known as subscribe to the store ie. is sync to the store.
+
+Whenever the slice is modified it will automatically update the value where we're using that slice value.
+
+=====================================================================================================================================
+
+1 :- Create a store
+    - configureStore - RTK
+2 :- Provider my store to app
+    - <Provider store={store} /> - import form react-redux
+3 :- Create a Slice
+    - craeteSlice - RTK
+        - createSlice({
+            name: "cart",
+            initialState: {
+                items: []
+            },
+            reducers: {
+                reducerFunctions : (state, payload) => {
+                    // modify your state
+                }
+            }
+        })
+        - export const { reducer: cartReducer, actions: cartActions } = cartSlice;
+4 :- Put that slice into store
+    - configureStore({
+        reducer: {
+            cart: cartReducer
+        }
+    })
+5 :- When having multiple reducers, how to combine them and put it into store
+    - const rootReducers = combineReducers({
+        cart: cartReducer,
+        theme: themeReducer,
+        auth: authReducer,
+    });
+    - configureStore({
+        reducer: rootReducers,
+    })

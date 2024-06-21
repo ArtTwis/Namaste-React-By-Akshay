@@ -1,0 +1,13 @@
+When you pass Data / State from parent to child components and then to other child is known as prop drilling.
+
+for example :- 
+- AppLayout
+    {state=user}
+    - <Body user={user} />
+            - <RestaurentCard user={user} />
+                - <h4>{user}</h4>
+
+====================== Prop Drilling ========================
+
+Why do we use useContext ? 
+- To avoid prop drilling.

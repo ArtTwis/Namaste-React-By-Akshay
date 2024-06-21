@@ -1,0 +1,5 @@
+Polyfill is basically a code will replace a new version of code.
+
+For example : Suppose your browser doesn't understand promises than it'll replace by other code which does same work as promises.
+
+Who coverts the new version of code to another code, it is the babeljs who does this for us.

@@ -1,0 +1,17 @@
+What is react testing library ?
+React testing library is a part of testing library and this testing library offers testing for other frameworks also.
+
+JEST - It is a Javascript testing framework. If you need to test javascript code we use JEST.
+
+React testing library uses JEST behind the scenes.
+ 
+STEPS :- 
+- install @testing-library/react
+- install JEST
+- configure JEST (will create a jest.config file) by using "npx jest --init" command
+- Now we have install this package -  "npm install -D jest-environment-jsdom"
+    Before 29th varsion of jest package this jest-environment-jsdom is no longer shipped by default, but now we have to install it seprately."
+- create my first test
+- configure babel - bcz jest need babel package
+- wrote expect sum test
+- gitignore coverage directory/report

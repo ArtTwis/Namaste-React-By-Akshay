@@ -1,0 +1,63 @@
+When we build our app weI'll use code splitting for all of our components, when I'll be doing bundling I'll make sure that my bundle doesn't include random code.
+
+Synonym for Code Splitting:
+// Chunking
+// Code Splitting
+// Dynamic Bundling
+// Lazy Loading
+// On demand loading
+// Dynamic Import
+
+- Bundling is great, but as your app grows, your bundle will grow too. Especially if you are including large third-party libraries. You need to keep an eye on the code you are including in your bundle so that you don’t accidentally make it so large that your app takes a long time to load.
+
+- To avoid winding up with a large bundle, it’s good to get ahead of the problem and start “splitting” your bundle. Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify (via factor-bundle) which can create multiple bundles that can be dynamically loaded at runtime.
+
+- Code-splitting your app can help you “lazy-load” just the things that are currently needed by the user, which can dramatically improve the performance of your app. While you haven’t reduced the overall amount of code in your app, you’ve avoided loading code that the user may never need, and reduced the amount of code needed during the initial load.
+
+
+
+React.lazy :-
+----------
+
+The React.lazy function lets you render a dynamic import as a regular component.
+
+React.lazy takes a function that must call a dynamic import(). This must return a Promise which resolves to a module with a default export containing a React component.
+
+The lazy component should then be rendered inside a Suspense component, which allows us to show some fallback content (such as a loading indicator) while we’re waiting for the lazy component to load.
+
+The fallback prop accepts any React elements that you want to render while waiting for the component to load. You can place the Suspense component anywhere above the lazy component. You can even wrap multiple lazy components with a single Suspense component.
+
+
+
+
+Code Spliting :-
+----------------
+
+It'll decide who much time your application would take, there're more factor but it is also the the main factor. To have seprate bundle(JS) files for diffrent modules
+Benefits :-
+- Small builds
+- Reduced load time
+
+React provide us two function one Lazy and other is Suspense.
+
+
+
+
+
+--------------
+CODE Example :
+--------------
+
+import React, { Suspense } from 'react';
+
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
+
+function MyComponent() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <OtherComponent />
+      </Suspense>
+    </div>
+  );
+}

@@ -1,0 +1,27 @@
+When you want to return before rendering the component is called early return / Guard Clause or Bouncer Pattern.
+
+Why to use Early return :- 
+- To avoid nested If-Else
+- Return or Throw as soon as possible
+- Keeps code readable and understandable
+- Make task easy while dealing with complex conditions
+
+
+// CODE Example :
+
+function doSomething(user, data) {
+  if (!hasPermission(user)) {
+    throw new PermissionDeniedError();
+  }
+
+  if (!isNetworkAvailable()) {
+    saveInQueue(user, data);
+    return;
+  }
+
+  if (!isValid(data)) {
+    throw new DataInvalidError();
+  }
+
+  sendToServer(user, data);
+}

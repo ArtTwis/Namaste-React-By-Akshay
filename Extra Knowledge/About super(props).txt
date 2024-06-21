@@ -1,0 +1,65 @@
+Mostly developers just write super(props) as it makes no harm in code but no one is eager to know the reason how the thing is actually working and how it is useful. Let’s dive more into the class components and find out the use of super(props) in the constructor.
+
+Here’s a question arises, Why do we need super(props)?
+
+So, the simple answer to this question is that this thing basically allows accessing this.props in a Constructor function. In fact, what the super() function does is, calls the constructor of the parent class. 
+
+Syntax: There’s nothing complex in using super(props), we just have to call super(props) in the constructor method of our child class component, like so:
+
+-----------------------------------------
+class Checkbox extends React.Component {
+  constructor(props) {
+    super(props); 
+    this.state = { isOn: true };
+  }
+  // ...
+}
+-----------------------------------------
+
+Let’s talk about it with the help of practical implementation.
+
+
+Example: Let’s now see the implementation of super(props), but in this example we will not use the super.
+
+-----------------------------------------
+import React from "react";
+  
+class Person extends React.Component {
+  constructor(props) {
+    console.log(this.props);
+  }
+  render() {
+      console.log(this.props);
+    return null;
+  }
+}
+export default Person;
+-----------------------------------------
+
+
+Explanation: This is because the child class constructor i.e. the Person Class here, will not recognize this keyword until super() function has been called. But the code outside the constructor will not get affected in any way. It will not affect rendering or availability of this.props in the render() function. 
+
+Example 2: Now lets see what happens when we use super(props) inside the constructor method, before using this keyword.
+
+-----------------------------------------
+import React from "react";
+  
+class Person extends React.Component {
+  constructor(props) {
+      super(props);
+    console.log(this.props);
+  }
+  render() {
+      console.log(this.props);
+    return null;
+  }
+}
+export default Person;
+-----------------------------------------
+
+  
+
+
+Explanation: Now we are getting an output (here props have nothing in it, that’s why it is an empty object) that means the props are getting logged into the console. When we call this super(props), we are basically calling the constructor of React.Component. So we can say that super() is a reference to the parent class constructor i.e. React.Component in the above example, which is also the base class for Person component. So when we pass props to super, the props get assigned to this also.
+
+So, to conclude, If we want to use this.props or simply this keyword inside the constructor, we need to pass the props coming from parent class (React.Component in this case) in super.
