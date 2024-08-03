@@ -1,0 +1,23 @@
+CDN :- CDN stands for Content Delivery Network.
+
+Why to use CDN :-
+- To decrease the latency of the application (annoying delay is called latency).
+- Scalability
+- Security. Any website can come across DDoS attacks or similar. CDN can solve this problem pretty easily.
+
+
+
+Crossorigin :- The crossorigin attribute in an HTML <script> tag controls how the browser handles requests for external scripts that come from another domain.
+
+
+
+React vs ReactDOM :- 
+React is a library and having all core functionality like hooks, state management like useState etc defined in this library.
+Whereas ReactDOM library is used to manipulate the DOM or modifiying the DOM. Creating root and rendering root is defined in ReactDOM library.
+
+
+React.createElement :- This will create object of reactElement.
+
+
+
+Root.render() :- This method will overwrite the root element which exists in HTML file...
