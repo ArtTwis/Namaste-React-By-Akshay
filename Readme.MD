@@ -119,3 +119,27 @@ The dev server supports several options, which you can specify via CLI options:
 ### <font color="#FFD700">Hot Reloading</font>
 
 As you make changes to your code, Parcel automatically rebuilds the changed files and updates your app in the browser. By default, Parcel fully reloads the page, but in some cases, it may perform Hot Module Replacement (HMR). HMR improves the development experience by updating modules in the browser at runtime without needing a whole page refresh
+
+## <font color="#FFD700">JS</font>
+
+> JSX (transpiled before it reaches to the JS engine to execute) ==> Parcel ==> Babel
+
+> JSX (transpiled by babel) ==> React.createElement ==> React Element ==> JS Object ==> HTML Element (render) ==> DOM
+
+> JSX first sanitize the data, remove malicious code and then only it executes... It not blindly runs and prevent attacker from malicious cross site attacks..
+
+JSX is a convention where we merge these html and js together and it is not a part of react both react and jsx are different..
+
+- It is not a HTML, it is a html like syntax
+- Both JSX and React are different
+
+## <font color="#FFD700">Component</font>
+
+> Everything in a React is a component.
+
+- Class Based Component (Old Way)
+- Functional Component (New Way) => If a function returning React Element is called functional component..
+
+## <font color="#FFD700">Component Composition</font>
+
+> When you're calling component into another component..

@@ -1,27 +1,26 @@
 {
-  "name": "1---inception",
+  "name": "2---igniting-our-app",
   "version": "1.0.0",
-  "description": "This is a Namaste React",
-  "main": "app.js",
+  "description": "Welcome to Namaste React series",
+  "main": "index.js",
   "scripts": {
+    "test": "jest",
     "start": "rm -rf .parcel-cache && parcel index.html",
     "build": "rm -rf .parcel-cache && parcel build index.html"
   },
   "keywords": [
-    "ReactJs",
-    "Javascript"
+    "React.Js",
+    "Javascript",
+    "Node.Js"
   ],
   "author": "ArtTwis",
   "license": "ISC",
-  "devDependencies": {
-    "parcel": "^2.12.0",
-    "process": "^0.11.10"
-  },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
-  "browserslist": [
-    "last 2 versions"
-  ]
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  }
 }
