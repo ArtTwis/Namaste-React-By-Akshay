@@ -90,7 +90,7 @@ Npm command is used to install a new package, where as Npx is used to execute a 
 
 - **Zero Config :** You just need to install parcel and tell the entry point and parcel will take care of all the things for you.
 
-> ==============================================================================================================================
+> ==========================================================
 
 - Dev Server : Parcel’s builtin dev server is automatically started when you run the default parcel command, which is a shortcut for parcel serve. By default, it starts a server at http://localhost:1234. If port 1234 is already in use, then a fallback port will be used. After Parcel starts, the location where the dev server is listening will be printed to the terminal.
 
@@ -102,13 +102,13 @@ The dev server supports several options, which you can specify via CLI options:
 
 - --open – Automatically opens the entry in your default browser after Parcel starts. You can also pass a browser name to open a different browser, e.g. --open safari.
 
-> ==============================================================================================================================
+> ==========================================================
 
 - Hot reloading : As you make changes to your code, Parcel automatically rebuilds the changed files and updates your app in the browser. By default, Parcel fully reloads the page, but in some cases it may perform Hot Module Replacement (HMR). HMR improves the development experience by updating modules in the browser at runtime without needing a whole page refresh. This means that application state can be retained as you change small things in your code.
 
 - CSS changes are automatically applied via HMR with no page reload necessary. This is also true when using a framework with HMR support built in, like React (via Fast Refresh), and Vue.
 
-> ==============================================================================================================================
+> ==========================================================
 
 - Lazy mode : In development, it can be frustrating to wait for your entire app to build before the dev server starts up. This is especially true when working on large apps with many pages. If you’re only working on one feature, you shouldn’t need to wait for all of the others to build unless you navigate to them.
 
@@ -118,7 +118,7 @@ The dev server supports several options, which you can specify via CLI options:
 
 - This also works with dynamic import(), not just separate entries. So if you have a page with a dynamically loaded feature, that feature will not be built until it is activated. When it is requested, Parcel eagerly builds all of the dependencies as well, without waiting for them to be requested.
 
-> =============================================================================================================================
+> ==========================================================
 
 - Caching : Parcel caches everything it builds to disk. If you restart the dev server, Parcel will only rebuild files that have changed since the last time it ran. Parcel automatically tracks all of the files, configuration, plugins, and dev dependencies that are involved in your build, and granularly invalidates the cache when something changes. For example, if you change a configuration file, all of the source files that rely on that configuration will be rebuilt.
 
@@ -126,7 +126,7 @@ The dev server supports several options, which you can specify via CLI options:
 
 - Caching can also be disabled using the --no-cache flag. Note that this only disables reading from the cache – a .parcel-cache folder will still be created.
 
-> ==============================================================================================================================
+> ==========================================================
 
 - HTTPS : Sometimes, you may need to use HTTPS during development. For example, you may need to use a certain hostname for authentication cookies, or debug mixed content issues. Parcel’s dev server supports HTTPS out of the box. You can either use an automatically generated certificate, or provide your own.
 
@@ -138,7 +138,7 @@ The dev server supports several options, which you can specify via CLI options:
 
 - parcel src/index.html --cert certificate.cert --key private.key
 
-> ==============================================================================================================================
+> ==========================================================
 
 - Auto install : When you use a language or plugin that isn’t included by default, Parcel will automatically install the necessary dependencies into your project for you. For example, if you include a .sass file, Parcel will install the @parcel/transformer-sass plugin. When this happens, you'll see a message in the terminal, and the new dependency will be added to the devDependencies in your package.json.
 
