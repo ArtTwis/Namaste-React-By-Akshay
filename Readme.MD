@@ -2,7 +2,7 @@
 
 ## CDN
 
-CDN stands for Content Delivery Network.
+: CDN stands for Content Delivery Network.
 
 ### Why to use CDN
 
@@ -12,45 +12,43 @@ CDN stands for Content Delivery Network.
 
 ## Crossorigin
 
-- The crossorigin attribute in an HTML <script> tag controls how the browser handles requests for external scripts that come from another domain.
+: The crossorigin attribute in an HTML <script> tag controls how the browser handles requests for external scripts that come from another domain.
 
 ## React vs ReactDOM
 
-- React is a library and having all core functionality like hooks, state management like useState etc defined in this library.
-
-- Whereas ReactDOM library is used to manipulate the DOM or modifiying the DOM. Creating root and rendering root is defined in ReactDOM library.
+: React is a library and having all core functionality like hooks, state management like useState etc defined in this library, Whereas ReactDOM library is used to manipulate the DOM or modifiying the DOM. Creating root and rendering root is defined in ReactDOM library.
 
 ## React.createElement
 
-This will create object of reactElement.
+: This will create object of reactElement.
 
 ## Root.render()
 
-This method will overwrite the root element which exists in HTML file...
+: This method will overwrite the root element which exists in HTML file...
 
 ## Package.json
 
-It is a configuraton file for node project..
+: It is a configuraton file for node project..
 
 ## Package-lock.json
 
-It is a file which keeps the track of packages which is installed in project...
+: It is a file which keeps the track of packages which is installed in project...
 
 ## Dependencies
 
-- Dependencies, these're the packages which're required in production env also...
-- DevDependencies, packages which are required in development phase only not in production dependencies...
+- Dependencies : these're the packages which're required in production env also...
+- DevDependencies : packages which are required in development phase only not in production dependencies...
 
 ## caret(^) vs tilde(~)
 
-- caret is used to update the minor version automatically...
-- tilde is used to update the major version automatically...
+: caret is used to update the minor version automatically...
+: tilde is used to update the major version automatically...
 
 ## Transitive Dependencies :- When we install any package, it might be depend on other packages and those packages also depends on other packages.. These packages are called transitive dependencies...
 
 ## npx vs Npm
 
-Npm command is used to install a new package, where as Npx is used to execute a package..
+: Npm command is used to install a new package, where as Npx is used to execute a package..
 
 # BUNDLERS :- Vite, Webpack, Parcel, Rollup or Browserify.
 
