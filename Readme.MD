@@ -100,9 +100,19 @@ Parcel gives us the following superpowers:
 
 > **Minify**: Minify the code files.
 
-> **Cleaning our Code** > **Dev and Prod build** > **Super fast build algorithm** > **Image Optimization**: Minify your images
+> **Cleaning our Code**
 
-> **Caching while development** > **Compression** > **Tree Shaking**: Removing unwanted code
+> **Dev and Prod build**
+
+> **Super fast build algorithm**
+
+> **Image Optimization**: Minify your images
+
+> **Caching while development**: Faster builds, it caches files..
+
+> **Compression**
+
+> **Tree Shaking**: Removing unwanted code
 
 > **Compatible with older versions of browsers**: It uses Polyfills (A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it).
 
