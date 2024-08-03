@@ -93,14 +93,23 @@ When we install any package, it might depend on other packages, and those packag
 Parcel gives us the following superpowers:
 
 > **Create a server** > **Hot Module Replacement**: Whenever you make changes in any of your project files, it automatically reloads the app, just like live-server. You don't need to press Ctrl+R to reload the app; it does it automatically. Another example is the nodemon package.
+
 > **File Watcher Algorithm**: With the help of this algorithm, Parcel knows that there is a change in the project files and it needs to reload the app again. Parcel takes care of it automatically.
+
 > **Bundling**: Bundle up all project files into the dist directory.
+
 > **Minify**: Minify the code files.
+
 > **Cleaning our Code** > **Dev and Prod build** > **Super fast build algorithm** > **Image Optimization**: Minify your images
+
 > **Caching while development** > **Compression** > **Tree Shaking**: Removing unwanted code
+
 > **Compatible with older versions of browsers**: It uses Polyfills (A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it).
+
 > Allows us to run our app on HTTPS on the development environment. (npx parcel index.html --https)
+
 > Manages port number automatically. Suppose your one app is running on port:1234, then you start another app, Parcel will take care of that and run that app on another available port.
+
 > **Zero Config**: You just need to install Parcel and tell the entry point, and Parcel will take care of all the things for you.
 
 ### <font color="#FFD700">Dev Server</font>
