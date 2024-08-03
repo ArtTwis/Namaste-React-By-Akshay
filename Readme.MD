@@ -1,10 +1,6 @@
 # <font color="#FFD700">Namaste React</font>
 
-================
-
 ## <font color="#FFD700">CDN</font>
-
----
 
 CDN stands for Content Delivery Network.
 
@@ -16,69 +12,47 @@ CDN stands for Content Delivery Network.
 
 ## <font color="#FFD700">Crossorigin</font>
 
----
-
 The crossorigin attribute in an HTML `<script>` tag controls how the browser handles requests for external scripts that come from another domain.
 
 ## <font color="#FFD700">React vs ReactDOM</font>
-
----
 
 React is a library and has all core functionality like hooks, state management like `useState`, etc., defined in this library. Whereas ReactDOM library is used to manipulate the DOM or modify the DOM. Creating root and rendering root is defined in the ReactDOM library.
 
 ## <font color="#FFD700">React.createElement</font>
 
----
-
 This will create an object of `ReactElement`.
 
 ## <font color="#FFD700">Root.render()</font>
-
----
 
 This method will overwrite the root element which exists in the HTML file.
 
 ## <font color="#FFD700">Package.json</font>
 
----
-
 It is a configuration file for a Node project.
 
 ## <font color="#FFD700">Package-lock.json</font>
 
----
-
 It is a file that keeps track of packages installed in the project.
 
 ## <font color="#FFD700">Dependencies</font>
-
----
 
 - **Dependencies**: These are the packages required in the production environment also.
 - **DevDependencies**: Packages required in the development phase only, not in production dependencies.
 
 ## <font color="#FFD700">caret(^) vs tilde(~)</font>
 
----
-
 - Caret is used to update the minor version automatically.
 - Tilde is used to update the major version automatically.
 
 ## <font color="#FFD700">Transitive Dependencies</font>
 
----
-
 When we install any package, it might depend on other packages, and those packages also depend on other packages. These packages are called transitive dependencies.
 
 ## <font color="#FFD700">npx vs Npm</font>
 
----
-
 - Npm command is used to install a new package, whereas Npx is used to execute a package.
 
 # <font color="#FFD700">BUNDLERS</font>
-
----
 
 - Vite
 - Webpack
@@ -92,7 +66,9 @@ When we install any package, it might depend on other packages, and those packag
 
 Parcel gives us the following superpowers:
 
-> **Create a server** > **Hot Module Replacement**: Whenever you make changes in any of your project files, it automatically reloads the app, just like live-server. You don't need to press Ctrl+R to reload the app; it does it automatically. Another example is the nodemon package.
+> **Create a server**
+
+> **Hot Module Replacement**: Whenever you make changes in any of your project files, it automatically reloads the app, just like live-server. You don't need to press Ctrl+R to reload the app; it does it automatically. Another example is the nodemon package.
 
 > **File Watcher Algorithm**: With the help of this algorithm, Parcel knows that there is a change in the project files and it needs to reload the app again. Parcel takes care of it automatically.
 
@@ -118,9 +94,17 @@ Parcel gives us the following superpowers:
 
 > Allows us to run our app on HTTPS on the development environment. (npx parcel index.html --https)
 
-> Manages port number automatically. Suppose your one app is running on port:1234, then you start another app, Parcel will take care of that and run that app on another available port.
+> **Manages port number automatically**. Suppose your one app is running on port:1234, then you start another app, Parcel will take care of that and run that app on another available port.
 
 > **Zero Config**: You just need to install Parcel and tell the entry point, and Parcel will take care of all the things for you.
+
+> **Consistent Hashing**:
+
+> **Code Splitting**:
+
+> **Diagnostics**:
+
+> **Error Handling**:
 
 ### <font color="#FFD700">Dev Server</font>
 
