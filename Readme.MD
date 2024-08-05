@@ -143,3 +143,11 @@ JSX is a convention where we merge these html and js together and it is not a pa
 ## <font color="#FFD700">Component Composition</font>
 
 > When you're calling component into another component..
+
+## <font color="#FFD700">Props</font>
+
+> Props are nothing just a arguments to the component...
+
+## <font color="#FFD700">Config Driven UI</font>
+
+> When a application is driven by data or some data configs...

@@ -9,3 +9,7 @@ It'll only re-render only the things which will findout by diff algorithm.
 Later in React 16 Diff algorithm is replaced by React Fibre.
 
 React Fibre is a new Reconscilation Engine.
+
+
+Ways to make react app render fats :-
+- Whenever we uses .map() and iterate to render component always use key property in it and that key should be unique for each element.
