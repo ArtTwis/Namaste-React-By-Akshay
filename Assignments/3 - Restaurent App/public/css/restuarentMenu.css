@@ -1,0 +1,130 @@
+#restuarent_menu_container {
+  padding: 3rem 10rem;
+  overflow-y: auto;
+}
+
+.restaurent-wrapper {
+  width: 100%;
+  background: linear-gradient(
+    rgb(255, 255, 255) -6.71%,
+    rgb(235, 235, 242) 56.19%,
+    rgb(223, 223, 231) 106.56%
+  );
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.restro-detail {
+  display: flex;
+  background: white;
+  border: 1px solid #393939;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.restro-detail img {
+  width: 200px;
+  object-fit: contain;
+  margin: 0px 2rem 0px 0px;
+  border: none;
+  border-radius: 12px;
+}
+
+.restaurent-wrapper .restro-name {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.restaurent-wrapper .restro-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.restaurent-wrapper .restroRating,
+.menu-item-rating-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.8rem;
+}
+
+.restaurent-wrapper .restroRating img,
+.menu-item-rating-wrapper img {
+  margin: 0px 5px;
+}
+
+.restaurent-wrapper .restroRating img:nth-child(1),
+.menu-item-rating-wrapper img:nth-child(1) {
+  width: 25px;
+  height: fit-content;
+  margin: 0px 0px;
+}
+
+.restaurent-wrapper .restroRating img {
+  width: 10px;
+  height: 10px;
+}
+
+.restaurent-wrapper .restroCausines {
+  color: darkred;
+}
+
+.restaurent-wrapper .restroLocation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.restaurent-wrapper .restroLocation img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.restaurent-wrapper :is(.restroCausines, .restroLocation) {
+  width: 250px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+#restro-menu-container {
+  margin: 2rem 0px;
+}
+
+#restro-menu-container-heading {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.menu-item-card-container {
+  margin: 1rem 0px;
+  background: linear-gradient(
+    rgb(255, 255, 255) -6.71%,
+    rgb(235, 235, 242) 56.19%,
+    rgb(223, 223, 231) 106.56%
+  );
+  border-radius: 12px;
+  padding: 5px;
+  display: flex;
+}
+
+.menu-item-card-container img {
+  width: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-right: 2rem;
+}
+
+.item-info-container p.menu-item-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.item-info-container p.menu-item-labels {
+  font-size: 1rem;
+  font-weight: 300;
+}

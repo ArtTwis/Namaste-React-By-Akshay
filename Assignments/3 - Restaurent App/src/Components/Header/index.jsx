@@ -1,5 +1,6 @@
 import FoodVillaLogo from "../../Assets/food_villa1.png";
-import { navLinks } from "./navLink";
+import { NavLinks } from "../../Constant/data.js";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -10,10 +11,17 @@ const Header = () => {
       </div>
       <div className="navLink_Container">
         <ul className="nav-items">
-          {navLinks.map((link) => (
-            <a href={link.href} className="poppins-bold">
-              <li>{link.navlink}</li>
-            </a>
+          {NavLinks.map((link, index) => (
+            <Link
+              to={link.href}
+              key={"nav-link-" + index}
+              className="poppins-bold"
+            >
+              <li>
+                <img src={link.icon} alt="NavIcon" srcSet={link.icon} />
+                {link.navlink}
+              </li>
+            </Link>
           ))}
         </ul>
       </div>

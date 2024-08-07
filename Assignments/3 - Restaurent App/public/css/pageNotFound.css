@@ -1,0 +1,27 @@
+#pageNotFound {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 180px);
+  top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#pageNotFound img {
+  width: 400px;
+  object-fit: contain;
+}
+
+#pageNotFound * {
+  margin-top: 1rem;
+}
+
+#pageNotFound h1 {
+  color: darkred;
+}
+
+#pageNotFound h2 {
+  color: #c5a800;
+}

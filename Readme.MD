@@ -120,7 +120,11 @@ The dev server supports several options, which you can specify via CLI options:
 
 As you make changes to your code, Parcel automatically rebuilds the changed files and updates your app in the browser. By default, Parcel fully reloads the page, but in some cases, it may perform Hot Module Replacement (HMR). HMR improves the development experience by updating modules in the browser at runtime without needing a whole page refresh
 
-## <font color="#FFD700">JS</font>
+### <font color="#FFD700">Browserlist</font>
+
+> It is a npm package to make our app compatible for all older browsers.
+
+## <font color="#FFD700">JSX</font>
 
 > JSX (transpiled before it reaches to the JS engine to execute) ==> Parcel ==> Babel
 
@@ -151,3 +155,25 @@ JSX is a convention where we merge these html and js together and it is not a pa
 ## <font color="#FFD700">Config Driven UI</font>
 
 > When a application is driven by data or some data configs...
+
+## <font color="#FFD700">Why react is fast ? What is Reconscilation Algorithm ?</font>
+
+- Why React is fast because it uses Virtual DOM.
+
+- Virtual DOM is representation of your actual DOM.
+
+- It uses Reconscilation Algorithm : The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+
+- It'll only re-render only the things which will findout by diff algorithm.
+
+- Later in React 16 Diff algorithm is replaced by React Fibre.
+
+- React Fibre is a new Reconscilation Engine.
+
+## <font color="#FFD700">Controlled vs Uncontrolled Components</font>
+
+>
+
+## <font color="#FFD700">Client-Side vs Server-Side Routing</font>
+
+> Server-Side routing means when you make a http call and in response you're getting the WebPage and you're printing it on the DOM, whereas Client-Side routing means that data is already loaded in browser, once you navigate to another route, it just manipulate the DOM and printing the navigate route...
