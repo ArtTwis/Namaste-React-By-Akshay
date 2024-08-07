@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import RestaurentInfo from "./Components/RestaurentInfo";
 import { constant } from "../../Constant/constant.js";
 import RestaurentMenuContainer from "./Components/RestaurentMenuCard";
 
 const RestaurentMenu = () => {
   const { pathname } = useLocation();
+  const { restroId } = useParams();
   const restaurentID = pathname.split("/restaurent/")[1];
   const [restaurentMenu, setRestaurentMenu] = useState([]);
   const [restaurentDetail, setRestaurentDetail] = useState(null);
-
-  console.log("restaurentMenu :>> ", restaurentMenu);
 
   const fetchData = async () => {
     const data = await fetch(constant.Restaurent_Menu_URL + restaurentID);
@@ -31,12 +30,12 @@ const RestaurentMenu = () => {
 
   return (
     <div id="restuarent_menu_container" className="poppins-regular">
-      {restaurentDetail ? (
+      {restaurentDetail && (
         <RestaurentInfo
           restaurentDetail={restaurentDetail}
           restaurentID={restaurentID}
         />
-      ) : null}
+      )}
       {restaurentMenu.length ? <RestaurentMenuContainer /> : null}
     </div>
   );

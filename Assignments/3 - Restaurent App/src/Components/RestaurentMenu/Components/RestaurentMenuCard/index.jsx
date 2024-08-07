@@ -1,17 +1,18 @@
 import React from "react";
 import { MenuItems } from "../../../../Constant/data";
 import { constant } from "../../../../Constant/constant";
-import Food from "../../../../Assets/food-menu-item.jpg";
+import FoodImage from "../../../../Assets/food-menu-item.jpg";
 import RatingIcon from "../../../../Assets/rating.png";
 
 const MenuItemCard = ({ item }) => {
   return (
     <div className="menu-item-card-container">
-      {item?.imageId ? (
-        <img src={constant.Restro_Image_URL + item.imageId} alt="MenuItem" />
-      ) : (
-        <img src={Food} />
-      )}
+      <img
+        src={
+          item.imageId ? constant.Restro_Image_URL + item.imageId : FoodImage
+        }
+        alt="MenuItem"
+      />
       <div className="item-info-container">
         <p className="menu-item-name">{item.name}</p>
         <p className="menu-item-labels">₹ {item.price / 100}</p>
