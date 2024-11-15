@@ -14,8 +14,8 @@ const ShimmerCard = () => {
 const HomepageShimmerUI = () => {
   return (
     <div id="restro_Container">
-      {[...Array(10).keys()].map((element) => (
-        <ShimmerCard />
+      {[...Array(10).keys()].map((element, index) => (
+        <ShimmerCard key={"shimmer" + index} />
       ))}
     </div>
   );
