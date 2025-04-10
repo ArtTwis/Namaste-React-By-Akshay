@@ -4,7 +4,7 @@ useEffect(() => {
 
 }, []);
 
-//  empty dependency array ==> once after render
+//  empty dependency array ==> once after initial render
 
 //  dependency array [searchText] ==> once after initial render + everytime after render (my searchText changed)
 
